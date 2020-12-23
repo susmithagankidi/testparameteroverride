@@ -12,7 +12,7 @@ Resources:
      CompatibleRuntimes:
         - python3.7
      Content:
-       S3Bucket: MyArtifactsSource
+       S3Bucket: codepipeline-us-east-1-664598695354
        S3Key: !Sub ${BuildObjectKey}.zip    ##Description changes to MYLayer TIMESTAMP.ZIP
      Description: !Sub Mylayer ${BuildObjectKey}
      LayerName: !Sub ${Environment}-My-Layer
