@@ -1,0 +1,7 @@
+Resources:   
+   myDB:     
+   Type: 'AWS::RDS::DBInstance'
+   DeletionPolicy: Retain
+   UpdateReplacePolicy: Retain
+   Properties:
+      Bucket: !Sub ${BuildObjectKey}-MyProjectBucket
