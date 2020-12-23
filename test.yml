@@ -1,0 +1,15 @@
+Parameters:
+
+  BuildObjectKey:
+    Type: String
+Resources:
+  MyLambdaLayer:
+   Type: AWS::Lambda::LayerVersion
+   Properties:
+     CompatibleRuntimes:
+        - python3.7
+     Content:
+       S3Bucket: MyArtifactsSource
+       S3Key: !Sub ${BuildObjectKey}.zip 
+     Description: !Sub Mylayer ${BuildObjectKey}
+     LayerName: My-Layer
