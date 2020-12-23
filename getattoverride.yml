@@ -4,7 +4,8 @@ Parameters:
     Type: String
     AllowedValues: [dev, qa, pilot, prod]##Passed in from codepipeline
   BuildObjectKey:
-    Type: StringResources:
+    Type: String
+Resources:
   MyLambdaLayer:
    Type: AWS::Lambda::LayerVersion
    Properties:
