@@ -1,0 +1,32 @@
+{
+"AWSTemplateFormatVersion": "2010-09-09",
+"Description": "TestTaskDef",
+"Parameters":{
+"Imagename":{
+"Type":"String",
+"Default":"nginx:latest"
+}
+
+},
+"Resources":{
+"taskdefinition": {
+"Type": "AWS::ECS::TaskDefinition",
+"Properties" : {
+"ContainerDefinitions" : [
+{
+"Name": "test-pipeline",
+"Memory":1,
+"Image":{"Ref":"Imagename"},
+"Cpu": "10",
+"PortMappings":[
+{
+"ContainerPort": 80,
+"HostPort": 80
+}
+]
+}
+]
+}
+}
+}
+}
