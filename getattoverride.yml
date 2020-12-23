@@ -3,8 +3,6 @@ Parameters:
   Environment:
     Type: String
     AllowedValues: [devxyzbs, qaxyzbs, pilotxyzbs, prodxyzbs]##Passed in from codepipeline
-  BuildObjectKey:
-    Type: String
 Resources:
   MyLambdaLayer:
    Type: AWS::S3::Bucket
